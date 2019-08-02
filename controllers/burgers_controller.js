@@ -50,7 +50,7 @@ burgerdb.burgers.update({
 
 }).then(function(result){
     res.json(result);
-    console.log(result);
+    
 })
 });
 //put end closure here

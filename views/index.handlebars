@@ -35,7 +35,7 @@
                                             class="update bg-info text-white">devoured</button>
                                         <button type="submit" data-del="{{this.id}}"
                                             class="delete bg-info text-white">delete</button>
-                                            <textarea id="customerName" data-cust="{{this.customerId}}"> </textarea></span></p>
+                                            <textarea id="customerName" > </textarea></span></p>
 
 
                             </li>
@@ -61,8 +61,6 @@
                             <li>
                                 <p> {{this.id}}. {{this.burger_name}} 
                                    
-                                    eaten by {{this.customer.cust_Name}}
-                                  
                                     <span> <button type="submit" data-del="{{this.id}}"
                                             class="delete bg-info text-white">delete</button></span></p>
 
@@ -90,7 +88,7 @@
             event.preventDefault();
             var x = $("#create [name=burgerName").val();
 
-            console.log(x);
+           
             var newBurgerName = {
 
                 burger_name: $("#create [name=burgerName").val()
