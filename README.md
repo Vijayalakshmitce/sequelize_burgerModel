@@ -1,1 +1,1 @@
-# sequelize_burgerModel
+# Burger
