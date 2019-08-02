@@ -35,7 +35,7 @@
                                             class="update bg-info text-white">devoured</button>
                                         <button type="submit" data-del="{{this.id}}"
                                             class="delete bg-info text-white">delete</button>
-                                            <textarea id="customerName" > </textarea></span></p>
+                                        <textarea id="customerName"> </textarea></span></p>
 
 
                             </li>
@@ -56,17 +56,17 @@
                     <p class="card-text">
                         <ul>
                             {{#each burgers}}
-                            
+
                             {{#if devoured}}
                             <li>
-                                <p> {{this.id}}. {{this.burger_name}} 
-                                   
+                                <p> {{this.id}}. {{this.burger_name}}
+
                                     <span> <button type="submit" data-del="{{this.id}}"
                                             class="delete bg-info text-white">delete</button></span></p>
 
                             </li>
                             {{/if}}
-                           
+
                             {{/each}}
                         </ul>
                     </p>
@@ -88,13 +88,13 @@
             event.preventDefault();
             var x = $("#create [name=burgerName").val();
 
-           
+
             var newBurgerName = {
 
                 burger_name: $("#create [name=burgerName").val()
             };
 
-            $.post("/app/burger",newBurgerName).then(function () {
+            $.post("/app/burger", newBurgerName).then(function () {
                 console.log("Order created");
                 location.reload();
             });
@@ -104,32 +104,32 @@
         $(".update").on("click", function (event) {
             event.preventDefault();
             var id = $(this).data("update");
-           
+
             var devoured = 1;
             console.log(id);
             var newUpdate = {
                 devoured: devoured
-            
+
             }
             console.log(newUpdate)
             $.ajax({
-      method: "PUT",
-      url: "/app/burger/" + id,
-      data: newUpdate
-    }).then(function () {
+                method: "PUT",
+                url: "/app/burger/" + id,
+                data: newUpdate
+            }).then(function () {
                 console.log("order delived");
                 location.reload();
             });
-            
+
         });
 
         $(".delete").on("click", function (event) {
             event.preventDefault();
             var id = $(this).data("del")
             $.ajax({
-      method: "DELETE",
-      url: "/app/burger/" + id
-    }).then(function () {
+                method: "DELETE",
+                url: "/app/burger/" + id
+            }).then(function () {
                 console.log("Record Deleted");
                 location.reload();
             });
@@ -139,22 +139,22 @@
 
         ////delete end clouser here
 
-     $("#customerName").on("change",function(event){
-    
-           var custEaten = 1
-      var newCustName = {
-          cust_Name: $("#customerName").val(),
-           cust_Eaten: custEaten
-      }
+        $("#customerName").on("change", function (event) {
 
-     $.post("/app/custName",newCustName).then(function () {
+            var custEaten = 1
+            var newCustName = {
+                cust_Name: $("#customerName").val(),
+                cust_Eaten: custEaten
+            }
+
+            $.post("/app/custName", newCustName).then(function () {
                 console.log("Order created");
                 location.reload();
             });
 
 
 
-     });
+        });
 
 
     </script>
