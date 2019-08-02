@@ -14,7 +14,7 @@ module.exports = function(sequelize,DataTypes){
 //burger asscoiates start here
 
 burgers.associate = function(models){
-models.burgers.belongsTo(models.customer, {
+    burgers.belongsTo(models.customer, {
     onDelete: "CASCADE",
     foreignKey: {
       allowNull : true

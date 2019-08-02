@@ -8,9 +8,11 @@ module.exports = function(app){
                 burgers: result
             }
             res.render("index",burgerDisplay);
-        });
+        })
     });
     ///get all end closure here
+    
+    
 
 
 app.post("/app/custName",function(req,res){
@@ -35,16 +37,20 @@ app.post("/app/burger",function(req,res){
 });
 //post end closure here
 
+
 app.put("/app/burger/:id",function(req,res){
 burgerdb.burgers.update({
     devoured : req.body.devoured,
-    for
+
 },{
     where:{
-        id: req.params.id
+        id: req.params.id,
+       
     }
+
 }).then(function(result){
     res.json(result);
+    console.log(result);
 })
 });
 //put end closure here

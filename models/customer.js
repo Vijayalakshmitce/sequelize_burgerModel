@@ -3,6 +3,10 @@ module.exports = function(sequelize,DataTypes){
         cust_Name:{
             type: DataTypes.STRING,
             allowNull : true
+        },
+        cust_Eaten:{
+            type: DataTypes.BOOLEAN,
+            defaultValues : false
         }
     });
 //table declare end here
