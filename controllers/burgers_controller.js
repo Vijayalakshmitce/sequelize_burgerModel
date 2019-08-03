@@ -3,13 +3,13 @@ var burgerdb = require("../models");
 module.exports = function(app){
 
     app.get("/",function(req,res){
-        burgerdb.burgers.findAll({}).then(function(result){
-            var burgerDisplay = {
-                burgers: result
-            }
-            res.render("index",burgerDisplay);
+        // burgerdb.burgers.findAll({}).then(function(result){
+        //     var burgerDisplay = {
+        //         burgers: result
+        //     }
+            res.send("index stuff and things");
         })
-    });
+    // });
     ///get all end closure here
     
     
