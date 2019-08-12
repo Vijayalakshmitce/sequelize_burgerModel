@@ -1,29 +1,32 @@
-.createB{
-    left:40px;
+.createB {
+    left: 40px;
 }
-.burger{
-    width : 200px;
+
+.burger {
+    width: 200px;
     height: 200px;
 }
 
-.create{
-    right:10px;
+.create {
+    right: 10px;
 }
+
 li {
     padding: 5px;
     margin: 5px;
     background: #faebd7;
-  }
+}
 
-  body{
+body {
     background-image: url("/img/b1.jpg");
     box-sizing: border-box;
     position: relative;
 }
-.container{
-   color:rgb(10, 17, 109);
+
+.container {
+    color: rgb(10, 17, 109);
 }
 
 div.special-card {
-    background: rgba(17, 16, 10, 0.2); 
+    background: rgba(17, 16, 10, 0.2);
 }

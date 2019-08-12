@@ -21,9 +21,11 @@ app.use(express.static(__dirname + "/public/assets"));
 
 require("./controllers/burgers_controller.js")(app)
 
-db.sequelize.sync({ force: true }).then(function(){
-app.listen(PORT, function () {
-    console.log("Server listening : " + PORT);
-});
+db.sequelize.sync({
+    force: true
+}).then(function () {
+    app.listen(PORT, function () {
+        console.log("Server listening : " + PORT);
+    });
 
 })
